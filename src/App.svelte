@@ -1,9 +1,7 @@
 <script lang="ts">
   import Tailwind from "./Tailwind.svelte";
+  import Events from "./Events.svelte";
 </script>
 
 <Tailwind />
-
-<div class="flex justify-center m-3">
-  Hello Countup
-</div>
+<Events />
