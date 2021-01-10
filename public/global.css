@@ -2,3 +2,5 @@ html,
 body {
     height: 100vh;
 }
+
+@font-face { font-family: Vulf-Sans-Light; src: url('/fonts/Vulf_Sans-Light.woff'); }
