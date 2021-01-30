@@ -1,8 +1,8 @@
 {
-    "name": "countup",
+    "name": "datekeeper",
     "version": "1.0.0",
     "scripts": {
-        "publish": "rm -rf ../../blog/static/apps/countup && rollup -c && cp -r public ../../blog/static/apps/countup",
+        "publish": "rm -rf ../../blog/static/apps/datekeeper && rollup -c && cp -r public ../../blog/static/apps/datekeeper",
         "dev": "rollup -c -w",
         "start": "sirv public"
     },
