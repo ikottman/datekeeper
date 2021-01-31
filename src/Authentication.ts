@@ -31,8 +31,8 @@ async function logout() {
 export async function login() {
   try {
     await auth0.loginWithPopup();
-    refreshUser();
-    refreshAuthenticated();
+    await refreshUser();
+    await refreshAuthenticated();
   } catch (e) {
     console.error(e);
   }
