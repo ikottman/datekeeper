@@ -1,17 +1,19 @@
 <script lang="ts">
-  import { authenticated } from './store.js';
-  import Events from "./Events.svelte";
+  import { user } from './store.js';
+  import TimelineArea from './TimelineArea.svelte';
   import Tailwind from "./Tailwind.svelte";
   import Login from "./Login.svelte";
+
 </script>
 
 <Tailwind />
 
 
-{#await $authenticated}
-  {:then isAuthenticated}
-  {#if isAuthenticated}
-    <Events />
+{#await $user}
+Loading...
+  {:then user}
+  {#if user}
+    <TimelineArea />
   {:else}
     <Login />
   {/if}

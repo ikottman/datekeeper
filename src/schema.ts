@@ -3,7 +3,12 @@ export interface Event {
   date: string;
 }
 
-export interface Events {
+export interface ApiResponse {
+  timelines: Timeline[];
+}
+
+export interface Timeline {
+  name: string;
   events: Event[];
 }
 
