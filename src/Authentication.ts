@@ -4,7 +4,7 @@ import { auth } from './auth'
 
 const auth0 = new Auth0Client({
   domain: auth.domain,
-  client_id: auth.client_id,
+  client_id: auth.clientId,
   audience: auth.audience,
   scope: auth.scope,
   cacheLocation: 'localstorage',
