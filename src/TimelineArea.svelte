@@ -2,11 +2,8 @@
   import Events from "./Events.svelte";
   import SelectTimeline from './SelectTimeline.svelte';
   import { getTimelines } from './api.js';
-  import { user } from './store';
 
-  const binUrl = $user['https://ikottman.com/binUrl'];
-  const binSecret = $user['https://ikottman.com/binSecret'];
-  const timelinePromise = getTimelines(binUrl, binSecret);
+  const timelinePromise = getTimelines();
 
   let selectedTimeline;
 </script>

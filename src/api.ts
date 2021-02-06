@@ -1,17 +1,32 @@
-import type { ApiResponse, Timeline } from './schema';
+import type {Timeline } from './schema';
 
-export async function getTimelines(url: string, secret: string): Promise<Timeline[]> {
-  const latestBin = `${url}/latest`;
-  const response = await fetch(latestBin, {
-    headers: {
-      'secret-key': secret
+export async function getTimelines(): Promise<Timeline[]> {
+  return new Promise(() => {
+    return {
+      "timelines": [
+        {
+          "name": "Birthdays",
+          "events": [
+            {
+              "event": "Ian's Birthday",
+              "date": "1989-09-06"
+            },
+            {
+              "event": "Haley's Birthday",
+              "date": "1989-12-25"
+            }
+          ]
+        },
+        {
+          "name": "Anniversaries",
+          "events": [
+            {
+              "event": "Wedding Anniversary",
+              "date": "2015-03-14"
+            }
+          ]
+        }
+      ]
     }
   });
-
-  if (response.ok) {
-    return await response.json().then((data: ApiResponse) => data.timelines);
-  } else {
-    console.error('Failed to retrieve timelines');
-    throw new Error();
-  }
 }

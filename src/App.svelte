@@ -1,20 +1,26 @@
 <script lang="ts">
-  import { user } from './store.js';
+  import firebase from 'firebase/app';
+  import { initAuth } from './auth/index';
+  import { firebaseConfig } from './auth/firebaseConfig';
   import TimelineArea from './TimelineArea.svelte';
   import Tailwind from "./Tailwind.svelte";
-  import Login from "./Login.svelte";
 
+  firebase.initializeApp(firebaseConfig);
+  const { loginWithGoogle, user } = initAuth();
 </script>
 
 <Tailwind />
 
-
-{#await $user}
-Loading...
-  {:then user}
-  {#if user}
+<div class="wrapper">
+  {#if $user}
     <TimelineArea />
   {:else}
-    <Login />
+    <div class="w-full max-w-xs">
+      <div class="mt-3">
+        <button type="button" on:click|preventDefault={loginWithGoogle}>
+          Sign In with Google
+        </button>
+      </div>
+    </div>
   {/if}
-{/await}
+</div>
