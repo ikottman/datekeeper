@@ -1,9 +1,7 @@
 import type {Timeline } from './schema';
 
 export async function getTimelines(): Promise<Timeline[]> {
-  return new Promise(() => {
-    return {
-      "timelines": [
+  return [
         {
           "name": "Birthdays",
           "events": [
@@ -26,7 +24,5 @@ export async function getTimelines(): Promise<Timeline[]> {
             }
           ]
         }
-      ]
-    }
-  });
+      ];
 }

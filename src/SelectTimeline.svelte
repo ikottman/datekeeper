@@ -1,6 +1,5 @@
 <script>
   export let options;
-  console.log('options', JSON.stringify(options, null, 2))
   export let selected;
 </script>
 
