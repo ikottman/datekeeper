@@ -7,7 +7,6 @@ import sveltePreprocess from "svelte-preprocess"
 import typescript from "@rollup/plugin-typescript"
 
 const production = !process.env.ROLLUP_WATCH
-
 function serve() {
     let server
 
@@ -36,6 +35,7 @@ export default {
         format: "iife",
         name: "app",
         file: "public/build/bundle.js",
+        inlineDynamicImports: true
     },
     plugins: [
         svelte({

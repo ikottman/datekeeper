@@ -6,6 +6,7 @@
   import Tailwind from "./Tailwind.svelte";
 
   firebase.initializeApp(firebaseConfig);
+
   const { loginWithGoogle, user } = initAuth();
 </script>
 
@@ -13,7 +14,7 @@
 
 <div class="wrapper">
   {#if $user}
-    <TimelineArea />
+    <TimelineArea user={$user}/>
   {:else}
     <div class="w-full max-w-xs">
       <div class="mt-3">

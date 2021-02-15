@@ -1882,6 +1882,11 @@ tslib@^2.0.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
   integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
 
+typesaurus@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/typesaurus/-/typesaurus-7.1.0.tgz#f030083a201f6e4d02e7f3287bec271d84fba229"
+  integrity sha512-2Az/QN4FprxtT/6Grr3gFb8v6dY1NkSkGvEt6l0b4/cY28p6HmNY/VaZP9p9wQP2GdU8lAbOi+Ip6j1gehCarA==
+
 typescript@*, typescript@^3.9.3:
   version "3.9.7"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"

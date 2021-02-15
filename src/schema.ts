@@ -18,3 +18,9 @@ export interface AuthConfig {
   audience: string;
   scope: string;
 }
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}

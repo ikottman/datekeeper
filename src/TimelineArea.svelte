@@ -2,9 +2,10 @@
   import Events from "./Events.svelte";
   import SelectTimeline from './SelectTimeline.svelte';
   import { getTimelines } from './api.js';
+  import type { User } from "./schema";
 
-  const timelinePromise = getTimelines();
-
+  export let user: User;
+  const timelinePromise = getTimelines(user.id);
   let selectedTimeline;
 </script>
 
@@ -13,4 +14,6 @@
   {#if selectedTimeline}
     <Events events={timelines.find(t => t.name === selectedTimeline).events}/>
   {/if}
+{:catch error}
+  <p style="color: red">Failed to retrieve timelines</p>
 {/await}
