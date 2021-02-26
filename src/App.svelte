@@ -1,7 +1,7 @@
 <script lang="ts">
   import firebase from 'firebase/app';
-  import { initAuth } from './auth/index';
-  import { firebaseConfig } from './auth/firebaseConfig';
+  import { initAuth } from './firebase/auth';
+  import { firebaseConfig } from './firebase/firebaseConfig';
   import TimelineArea from './TimelineArea.svelte';
   import Tailwind from "./Tailwind.svelte";
 

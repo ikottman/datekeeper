@@ -1,5 +1,5 @@
 import { collection, query, where } from 'typesaurus'
-import type { Timeline } from './schema';
+import type { Timeline } from '../schema';
 
 export async function getTimelines(userId: string): Promise<Timeline[]>{
   const events = collection<Timeline>('timelines')

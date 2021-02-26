@@ -1,7 +1,7 @@
 <script lang="ts">
   import Events from "./Events.svelte";
   import SelectTimeline from './SelectTimeline.svelte';
-  import { getTimelines } from './api.js';
+  import { getTimelines } from './firebase/api.js';
   import type { User } from "./schema";
 
   export let user: User;
