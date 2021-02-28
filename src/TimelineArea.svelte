@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Events from "./Events.svelte";
+  import EventsList from "./EventsList.svelte";
   import SelectTimeline from './SelectTimeline.svelte';
   import { getTimelines } from './firebase/api.js';
   import type { User } from "./schema";
@@ -10,9 +10,9 @@
 </script>
 
 {#await timelinePromise then timelines}
-  <SelectTimeline options={timelines.map(t => t.name)} bind:selected={selectedTimeline}/>
+  <SelectTimeline options={timelines.map(t => t.data.name)} bind:selected={selectedTimeline}/>
   {#if selectedTimeline}
-    <Events events={timelines.find(t => t.name === selectedTimeline).events}/>
+    <EventsList timeline={timelines.find(t => t.data.name === selectedTimeline)}/>
   {/if}
 {:catch error}
   <p style="color: red">Failed to retrieve timelines</p>
