@@ -12,9 +12,9 @@
   <div class="col-start-2">
     <EventForm timeline={timeline}/>
   </div>
-  {#each events as { event, date }}
+  {#each events as { name, date }}
     <div class="col-start-2">
-      <Event event={event} date={date} />
+      <Event name={name} date={date} />
     </div>
   {/each}
 </div>

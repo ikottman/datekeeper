@@ -2,16 +2,19 @@
   import type { Doc } from 'typesaurus'
   import type { Timeline } from "./schema";
   import { updateTimeline } from './firebase/api.js';
+  import type { User } from "./schema";
   export let timeline: Doc<Timeline>;
+  export let user: User;
+
   let name;
   let date;
   function addEvent() {
     const event = {
-      event: name,
+      name: name,
       date: date
     };
     timeline.data.events.push(event);
-    updateTimeline(timeline);
+    updateTimeline(user.id, timeline);
   }
 </script>
 

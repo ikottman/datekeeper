@@ -1,10 +1,6 @@
 export interface Event {
-  event: string;
+  name: string;
   date: string;
-}
-
-export interface ApiResponse {
-  timelines: Timeline[];
 }
 
 export interface Timeline {
