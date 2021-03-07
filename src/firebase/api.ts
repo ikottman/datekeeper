@@ -20,6 +20,5 @@ export async function addTimeline(userId: string, name: string): Promise<Ref<Tim
 }
 
 export async function createUser(userId): Promise<void> {
-
   return set(users, userId, {});
 }

@@ -1,12 +1,10 @@
 <script lang="ts">
   import { addTimeline } from './firebase/api.js';
-  import type { User } from "./schema";
-
-  export let user: User;
+  import { user } from './store';
 
   let name;
   function createTimeline() {
-    addTimeline(user.id, name);
+    addTimeline($user.id, name);
   }
 </script>
 
