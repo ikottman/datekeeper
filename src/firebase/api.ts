@@ -3,7 +3,6 @@ import type { Timeline } from '../schema';
 type User = { };
 const users = collection<User>('users');
 const timelines = subcollection<Timeline, User>('timelines', users);
-const events = subcollection<Event, Timeline, User>('events', timelines);
 
 export async function getTimelines(userId: string): Promise<Doc<Timeline>[]>{
   const usersTimelines = timelines(userId);
@@ -17,8 +16,7 @@ export async function updateTimeline(userId: string, timelineDoc: Doc<Timeline>)
 
 export async function addTimeline(userId: string, name: string): Promise<Ref<Timeline>> {
   const usersTimelines = timelines(userId);
-  // @ts-ignore
-  return add(usersTimelines, { name: name });
+  return add(usersTimelines, { name: name, events: [] });
 }
 
 export async function createUser(userId): Promise<void> {

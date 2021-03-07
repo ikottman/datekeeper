@@ -15,7 +15,7 @@
   <SelectTimeline options={timelines.map(t => t.data.name)} bind:selected={selectedTimeline}/>
   <TimelineForm user={user}/>
   {#if selectedTimeline}
-    <EventsList timeline={timelines.find(t => t.data.name === selectedTimeline)}/>
+    <EventsList user={user} timeline={timelines.find(t => t.data.name === selectedTimeline)}/>
   {/if}
 {:catch error}
   <TimelineForm user={user}/>
