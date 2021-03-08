@@ -12,7 +12,11 @@
 <Tailwind />
 
 {#if $user}
-  <TimelineArea />
+  <div class="grid grid-cols-3 m-4">
+    <div class="col-start-2">
+      <TimelineArea />
+    </div>
+  </div>
 {:else}
   <Login />
 {/if}

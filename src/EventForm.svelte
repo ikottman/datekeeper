@@ -14,9 +14,29 @@
     };
     timeline.data.events.push(event);
     updateTimeline($user.id, timeline);
+    name = undefined;
+    date = undefined;
   }
 </script>
 
-<input bind:value={name} placeholder="Your event here">
-<input bind:value={date} placeholder="1954-04-11">
-<button class="" on:click={addEvent}>Save</button>
+<style>
+  input {
+    display: block;
+  }
+
+  button {
+    color: #5bb7d7;
+    border-color: #5bb7d7;
+    border-width: 3px;
+    padding: 7px;
+  }
+
+  button:hover {
+    padding: 5px;
+    border-width: 5px;
+  }
+</style>
+
+<input class="my-2" bind:value={name} placeholder=" Your Event Here">
+<input class="my-2" bind:value={date} placeholder=" 1954-04-11">
+<button on:click={addEvent}>Add Event</button>

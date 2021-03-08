@@ -7,13 +7,14 @@
   timeline.data.events.sort((a, b) => a.date.localeCompare(b.date))
 </script>
 
-<div class="grid grid-cols-3 gap-4 m-4">
+<br/>
+<br/>
+<EventForm timeline={timeline}/>
+<br/>
+<br/>
+{#each timeline.data.events as { name, date }}
   <div class="col-start-2">
-    <EventForm timeline={timeline}/>
+    <Event name={name} date={date} />
   </div>
-  {#each timeline.data.events as { name, date }}
-    <div class="col-start-2">
-      <Event name={name} date={date} />
-    </div>
-  {/each}
-</div>
+  <br/>
+{/each}
