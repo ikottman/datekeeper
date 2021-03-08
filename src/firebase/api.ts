@@ -1,10 +1,26 @@
 import { Doc, collection, update, set, add, subcollection, all } from 'typesaurus';
-import { timelines } from '../store';
-import type { Timeline } from '../schema';
+import { user, timelines } from '../store';
+import type { Timeline, User } from '../schema';
 
 type UserDoc = { }; // we don't store any user fields, it's just a parent collection
 const users = collection<UserDoc>('users');
 const timelinesCollection = subcollection<Timeline, UserDoc>('timelines', users);
+
+// fill in state based on the logged in user
+user.subscribe((value: User) => {
+  if (value) {
+    refreshTimelines(value.id);
+  } else {
+    timelines.set([]);
+  }
+});
+
+// make sure the user has a doc in the datastore
+user.subscribe((value: User) => {
+  if (value) {
+    createUser(value.id);
+  }
+});
 
 export async function refreshTimelines(userId: string): Promise<void> {
   const usersTimelines = timelinesCollection(userId);
