@@ -12,8 +12,8 @@
 <Tailwind />
 
 {#if $user}
-  <div class="grid grid-cols-3 m-4">
-    <div class="col-start-2">
+  <div class="grid grid-cols-6 m-4">
+    <div class="col-start-3 col-end-5">
       <TimelineArea />
     </div>
   </div>

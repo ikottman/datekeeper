@@ -10,7 +10,6 @@
 
 <style>
   input {
-    display: block;
     padding: 5px;
   }
 
@@ -27,5 +26,10 @@
   }
 </style>
 
-<input class="my-2"bind:value={name} placeholder="Your Timeline Here">
-<button class="" on:click={createTimeline}>Add Timeline</button>
+<div class="flex justify-center">
+  <input class="mt-2"bind:value={name} placeholder="Your Timeline Here">
+</div>
+
+<div class="flex justify-center">
+  <button class="my-2" on:click={createTimeline}>Add Timeline</button>
+</div>

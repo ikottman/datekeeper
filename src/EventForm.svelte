@@ -21,7 +21,6 @@
 
 <style>
   input {
-    display: block;
     padding: 5px;
   }
 
@@ -38,6 +37,14 @@
   }
 </style>
 
-<input class="my-2" bind:value={name} placeholder="Your Event Here">
-<input class="my-2" bind:value={date} placeholder="1954-04-11">
-<button on:click={addEvent}>Add Event</button>
+<div class="flex justify-center">
+  <input class="mt-2" bind:value={name} placeholder="Your Event Here">
+</div>
+
+<div class="flex justify-center">
+  <input class="my-2" bind:value={date} placeholder="1954-04-11">
+</div>
+
+<div class="flex justify-center">
+  <button class="mb-2" on:click={addEvent}>Add Event</button>
+</div>
