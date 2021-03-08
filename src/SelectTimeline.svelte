@@ -1,8 +1,10 @@
 <script lang="ts">
   import type { Timeline } from './schema';
   import type { Doc } from 'typesaurus';
+  import { selectedTimeline } from './store';
   export let timelines: Doc<Timeline>[];
-  export let selected;
+  let selected;
+  $: selectedTimeline.set(selected);
 </script>
 
 <select bind:value={selected}>
