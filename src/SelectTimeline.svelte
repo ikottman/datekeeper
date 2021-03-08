@@ -1,15 +1,14 @@
-<script>
-  export let options;
+<script lang="ts">
+  import type { Timeline } from './schema';
+  import type { Doc } from 'typesaurus';
+  export let timelines: Doc<Timeline>[];
   export let selected;
 </script>
 
-<style>
-</style>
-
 <select bind:value={selected}>
-  {#each options as option}
-    <option value={option}>
-      {option}
+  {#each timelines as timeline}
+    <option value={timeline}>
+      {timeline.data.name}
     </option>
   {/each}
 </select>

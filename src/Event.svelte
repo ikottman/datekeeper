@@ -4,8 +4,8 @@
 
   export let name;
   export let date;
-  date = dayjs(date);
-  const dateDisplay = date.format("MMMM D, YYYY")
+  $: date = dayjs(date);
+  $: dateDisplay = date.format("MMMM D, YYYY")
 </script>
 
 <div class="p-4 bg-gray-100">

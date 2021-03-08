@@ -4,8 +4,8 @@
   export let date;
 
   const today = dayjs();
-  const years = Math.abs(date.diff(today, 'year'));
-  const months = Math.abs(date.diff(today, 'month')) - (years * 12);
+  $: years = Math.abs(date.diff(today, 'year'));
+  $: months = Math.abs(date.diff(today, 'month')) - (years * 12);
 </script>
 
 <div class="grid grid-cols-2">

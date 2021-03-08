@@ -1,11 +1,12 @@
-export interface Event {
+// avoid collision with DOM Events type
+export interface EventType {
   name: string;
   date: string;
 }
 
 export interface Timeline {
   name: string;
-  events: Event[];
+  events: EventType[];
 }
 
 export interface AuthConfig {
