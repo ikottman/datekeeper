@@ -14,6 +14,10 @@ selectedTimeline.subscribe(value => {
   selectedId = value?.ref?.id;
 });
 timelines.subscribe((value: Doc<Timeline>[]) => {
-  const refreshedSelected = value.find(timeline => timeline.ref.id === selectedId)
-  selectedTimeline.set(refreshedSelected);
+  if (selectedId) {
+    const refreshedSelected = value.find(timeline => timeline.ref.id === selectedId)
+    selectedTimeline.set(refreshedSelected);
+  } else {
+    selectedTimeline.set(value[0]);
+  }
 });
