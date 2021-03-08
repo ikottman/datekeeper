@@ -5,7 +5,7 @@
   import TimelineForm from "./TimelineForm.svelte";
 </script>
 
-{#if $timelines}
+{#if $timelines?.length > 0}
   <SelectTimeline timelines={$timelines} />
   <TimelineForm />
   {#if $selectedTimeline}

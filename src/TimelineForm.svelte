@@ -11,7 +11,7 @@
 <style>
   input {
     display: block;
-
+    padding: 5px;
   }
 
   button {
@@ -27,5 +27,5 @@
   }
 </style>
 
-<input class="my-2"bind:value={name} placeholder=" Your Timeline Here">
+<input class="my-2"bind:value={name} placeholder="Your Timeline Here">
 <button class="" on:click={createTimeline}>Add Timeline</button>
