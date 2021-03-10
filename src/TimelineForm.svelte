@@ -14,15 +14,15 @@
   }
 
   button {
-    color: #5bb7d7;
-    border-color: #5bb7d7;
+    color: #fdfffc;
+    border-color: #fdfffc;
     border-width: 3px;
     padding: 7px;
   }
 
   button:hover {
-    padding: 5px;
     border-width: 5px;
+    padding: 5px;
   }
 </style>
 
