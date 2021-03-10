@@ -20,13 +20,7 @@
 </script>
 
 <style>
-  input {
-    padding: 5px;
-  }
-
   button {
-    color: #fdfffc;
-    border-color: #fdfffc;
     border-width: 3px;
     padding: 7px;
   }
@@ -37,14 +31,18 @@
   }
 </style>
 
-<div class="flex justify-center">
-  <input class="mt-2" bind:value={name} placeholder="Your Event Here">
-</div>
+<div class="border-4 border-gray-100 p-2 mb-2">
+  <label class="block text-gray-100 text-xs font-bold mb-2">EVENT NAME</label>
+  <div class="relative flex w-full flex-wrap items-stretch mb-3">
+    <input type="text" bind:value={name} placeholder="Most Boring Day in History" class="text-sm outline-none focus:outline-none focus:shadow-outline w-full pl-1"/>
+  </div>
 
-<div class="flex justify-center">
-  <input class="my-2" bind:value={date} placeholder="1954-04-11">
-</div>
+  <label class="block text-gray-100 text-xs font-bold mb-2">EVENT DATE</label>
+  <div class="relative flex w-full flex-wrap items-stretch mb-3">
+    <input type="text" bind:value={date} placeholder="1954-04-11" class="text-sm outline-none focus:outline-none focus:shadow-outline w-full pl-1"/>
+  </div>
 
-<div class="flex justify-center">
-  <button class="mb-2" on:click={addEvent}>Add Event</button>
+  <div class="flex justify-center">
+    <button class="text-gray-100 border-gray-100 mb-2" on:click={addEvent}>Add Event</button>
+  </div>
 </div>

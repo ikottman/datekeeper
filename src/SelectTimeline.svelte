@@ -4,8 +4,9 @@
   $: selectedTimeline.set(selected);
 </script>
 
+<label class="block text-gray-100 text-xs font-bold mb-2">TIMELINE</label>
 <div class="flex justify-center my-2">
-  <select bind:value={selected}>
+  <select class="mt-1 block w-full" bind:value={selected}>
     {#each $timelines as timeline}
       <option value={timeline}>
         {timeline.data.name}
