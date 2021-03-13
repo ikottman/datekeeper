@@ -1,6 +1,7 @@
 <script lang="ts">
   import { addTimeline } from './firebase/api.js';
   import { user } from './store';
+  import Button from './components/Button.svelte';
 
   let name;
   function createTimeline() {
@@ -8,17 +9,6 @@
   }
 </script>
 
-<style>
-  button {
-    border-width: 3px;
-    padding: 7px;
-  }
-
-  button:hover {
-    border-width: 5px;
-    padding: 5px;
-  }
-</style>
 
 <div class="border-4 border-gray-100 p-2 mb-2">
   <label class="block text-gray-100 text-xs font-bold mb-2">TIMELINE NAME</label>
@@ -27,6 +17,8 @@
   </div>
 
   <div class="flex justify-center">
-    <button class="text-gray-100 border-gray-100 mb-2" on:click={createTimeline}>Add Timeline</button>
+    <Button onClick={createTimeline}>
+      Add Timeline
+    </Button>
   </div>
 </div>
