@@ -1,7 +1,8 @@
 <script lang="ts">
   export let title;
 </script>
-<div class="border-4 border-gray-100 p-2 mb-2 grid gap-2">
+
+<div class="border-4 border-gray-100 p-2 grid gap-2">
   {#if title}
   <div class="justify-self-center">
     <h1 class="text-gray-100 text-lg font-bold uppercase">{title}</h1>

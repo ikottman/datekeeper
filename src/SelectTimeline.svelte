@@ -1,12 +1,14 @@
 <script lang="ts">
   import { selectedTimeline, timelines } from './store';
+  import Label from "./components/Label.svelte";
+
   let selected = $selectedTimeline;
   $: selectedTimeline.set(selected);
 </script>
 
-<label class="block text-gray-100 text-xs font-bold mb-2">TIMELINE</label>
-<div class="flex justify-center my-2">
-  <select class="mt-1 block w-full" bind:value={selected}>
+<div>
+  <Label>timeline</Label>
+  <select class="w-full" bind:value={selected}>
     {#each $timelines as timeline}
       <option value={timeline}>
         {timeline.data.name}

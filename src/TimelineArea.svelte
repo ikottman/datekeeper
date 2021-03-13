@@ -2,17 +2,15 @@
   import { timelines, selectedTimeline } from './store';
   import EventForm from "./EventForm.svelte";
   import EventsList from "./EventsList.svelte";
-  import SelectTimeline from './SelectTimeline.svelte';
   import TimelineForm from "./TimelineForm.svelte";
 </script>
 
-{#if $timelines?.length > 0}
+<div class="grid gap-3">
   <TimelineForm />
-  {#if $selectedTimeline}
-    <EventForm timeline={$selectedTimeline}/>
-    <SelectTimeline/>
-    <EventsList/>
+  {#if $timelines?.length > 0}
+    {#if $selectedTimeline}
+      <EventForm timeline={$selectedTimeline}/>
+      <EventsList/>
+    {/if}
   {/if}
-{:else}
-  <TimelineForm />
-{/if}
+</div>
