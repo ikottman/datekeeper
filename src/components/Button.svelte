@@ -14,4 +14,4 @@
   }
 </style>
 
-<button class="text-gray-100 border-gray-100 mb-2" on:click={onClick}><slot/></button>
+<button class="text-gray-100 border-gray-100" on:click={onClick}><slot/></button>
