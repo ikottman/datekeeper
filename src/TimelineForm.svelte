@@ -13,7 +13,5 @@
 
 <Form title="timeline">
   <Input slot="input1" label="name" placeholder="Birthdays" bind:value={name}/>
-  <Button slot="submit" onClick={createTimeline}>
-    Add Timeline
-  </Button>
+  <Button slot="submit" onClick={createTimeline}>Add</Button>
 </Form>

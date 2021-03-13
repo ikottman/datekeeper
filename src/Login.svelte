@@ -6,5 +6,5 @@
 </script>
 
 <Button onClick={loginWithGoogle}>
-  Sign In with Google
+  Sign in with Google
 </Button>

@@ -25,7 +25,5 @@
 <Form title="event">
   <Input slot="input1" label="name" placeholder="Most Boring Day in History" bind:value={name} />
   <Input slot="input2" label="date" placeholder="1954-04-11" bind:value={date} />
-  <Button slot="submit" onClick={addEvent}>
-    Add Event
-  </Button>
+  <Button slot="submit" onClick={addEvent}>Add</Button>
 </Form>
