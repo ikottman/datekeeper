@@ -2,7 +2,7 @@
     "name": "datekeeper",
     "version": "1.0.0",
     "scripts": {
-        "publish": "rm -rf ../../blog/static/apps/datekeeper && rollup -c && cp -r public ../../blog/static/apps/datekeeper",
+        "blog": "rm -rf ../../blog/static/apps/datekeeper && rollup -c && cp -r public ../../blog/static/apps/datekeeper",
         "dev": "rollup -c -w",
         "start": "sirv public"
     },
@@ -18,7 +18,7 @@
         "rollup": "^2.3.4",
         "rollup-plugin-livereload": "^1.0.0",
         "rollup-plugin-svelte": "^5.0.3",
-        "rollup-plugin-terser": "^5.1.2",
+        "rollup-plugin-terser": "^7.0.2",
         "svelte": "^3.0.0",
         "svelte-check": "^1.0.0",
         "svelte-preprocess": "^4.0.0",

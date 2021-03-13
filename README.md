@@ -7,5 +7,5 @@ yarn dev
 # build and move to blog
 
 ```
-yarn publish
+yarn blog
 ```
