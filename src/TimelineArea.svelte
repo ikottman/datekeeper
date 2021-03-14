@@ -6,11 +6,9 @@
 </script>
 
 <div class="grid gap-3">
-  <TimelineForm />
-  {#if $timelines?.length > 0}
-    {#if $selectedTimeline}
-      <EventForm timeline={$selectedTimeline}/>
-      <EventsList/>
-    {/if}
+  {#if $selectedTimeline}
+    <EventsList/>
+    <EventForm timeline={$selectedTimeline}/>
   {/if}
+  <TimelineForm />
 </div>

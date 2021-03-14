@@ -11,13 +11,13 @@
 
 <Tailwind />
 
-<div class="grid grid-cols-3 m-6">
+<div class="grid grid-cols-1 sm:grid-cols-3 m-6">
   {#if $user}
-    <div class="col-start-2 max-w-lg justify-self-stretch">
+    <div class="col-start-1 sm:col-start-2 max-w-lg justify-self-stretch">
       <TimelineArea />
     </div>
     {:else}
-      <div class="col-start-2 justify-self-center">
+      <div class="col-start-1 sm:col-start-2 justify-self-center">
         <Login />
       </div>
     {/if}
